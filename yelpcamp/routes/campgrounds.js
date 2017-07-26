@@ -25,9 +25,11 @@ router.post('/', middleware.isLoggedIn, function(req, res){
     var author = {
         id: req.user._id,
         username: req.user.username
-    }
+    };
+    var price = req.body.price;
     var newCampground = {
         name: name,
+        price: price,
         image: image,
         description: desc,
         author: author
